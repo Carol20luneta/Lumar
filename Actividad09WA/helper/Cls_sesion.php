@@ -1,0 +1,17 @@
+<?php
+    class Sesion{
+        function __construct(){
+            session_start();
+        }
+        
+        public function crearVariable($nombre, $valor){
+            $_SESSION[$nombre]=$valor;
+    
+        }
+    
+        public function borrarVariable($nombre){
+            unset($_SESSION[$nombre]);
+            //session:destroy() te borra todos los elementos del arreglo.
+        }
+    }
+?>
